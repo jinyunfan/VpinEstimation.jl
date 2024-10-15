@@ -1,4 +1,4 @@
-module VPIN
+module VpinEstimation
 
   using DataFrames
   using CSV
@@ -12,5 +12,4 @@ module VPIN
   include("calculate.jl")
 
 end
-
 

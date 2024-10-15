@@ -1,4 +1,4 @@
-using VPIN
+using VpinEstimation
 using Test
 using CSV,DataFrames
 
