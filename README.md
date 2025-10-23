@@ -50,7 +50,7 @@ println("Daily VPIN: ", daily_vpin)
 
 ## Data Format
 
-Your input DataFrame must have exactly 3 columns:
+Your input DataFrame has at least 3 columns:
 1. **timestamp**: DateTime or convertible string
 2. **price**: Numeric price data
 3. **volume**: Positive numeric volume data
