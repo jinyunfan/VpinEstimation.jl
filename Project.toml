@@ -1,11 +1,11 @@
-name = "VpinEstimation"
+name = "VPINEstimation"
 uuid = "98b75bef-cec7-42fd-9fd8-1608d125fef6"
-authors = ["fanjinyun <fanjinyun1113@163.com>"]
+authors = ["Jinyun Fan <fanjinyun1113@163.com>"]
 version = "0.1.0"
 description = "Calculate Volume-synchronized Probability of Informed Trading (VPIN) in high-frequency trading environments"
 keywords = ["finance", "trading", "market-microstructure", "vpin", "informed-trading", "high-frequency"]
 license = "MIT"
-repository = "https://github.com/jinyunfan/VpinEstimation.jl"
+repository = "https://github.com/jinyunfan/VPINEstimation.jl"
 
 [deps]
 CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"

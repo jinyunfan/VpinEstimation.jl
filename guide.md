@@ -1,4 +1,4 @@
-# VpinEstimation.jl Detailed Guide
+# VPINEstimation.jl Detailed Guide
 
 ## API Reference
 
@@ -57,11 +57,11 @@ DataFrame(
 ## Working with Real Data
 
 ```julia
-using VpinEstimation, CSV, DataFrames
+using VPINEstimation, CSV, DataFrames
 
 # Load and validate data
 data = CSV.read("market_data.csv", DataFrame)
-VpinEstimation.validate_dataset(data)
+VPINEstimation.validate_dataset(data)
 
 # Calculate VPIN
 daily_vpin, bucket_data = vpin(60, 50, 10, data)

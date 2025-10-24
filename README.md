@@ -1,7 +1,7 @@
-# VpinEstimation.jl
+# VPINEstimation.jl
 
-[![Build Status](https://github.com/jinyunfan/VpinEstimation.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/jinyunfan/VpinEstimation.jl/actions/workflows/CI.yml?query=branch%3Amain)
-[![Coverage](https://codecov.io/gh/jinyunfan/VpinEstimation.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/jinyunfan/VpinEstimation.jl)
+[![Build Status](https://github.com/jinyunfan/VPINEstimation.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/jinyunfan/VPINEstimation.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Coverage](https://codecov.io/gh/jinyunfan/VPINEstimation.jl/branch/main/graph/badge.svg)](https://codecov.io/gh/jinyunfan/VPINEstimation.jl)
 [![Julia](https://img.shields.io/badge/julia-v1.6%2B-blue.svg)](https://julialang.org/)
 
 A Julia package for calculating the Volume-synchronized Probability of Informed Trading (VPIN) in high-frequency trading environments.
@@ -24,13 +24,13 @@ VPIN measures the probability of informed trading by analyzing volume imbalances
 
 ```julia
 using Pkg
-Pkg.add("VpinEstimation")
+Pkg.add("VPINEstimation")
 ```
 
 ## Quick Start
 
 ```julia
-using VpinEstimation, CSV, DataFrames
+using VPINEstimation, CSV, DataFrames
 
 # Load trading data with columns: [timestamp, price, volume]
 data = CSV.read("trading_data.csv", DataFrame)
@@ -58,7 +58,7 @@ Your input DataFrame has at least 3 columns:
 ## Example with Sample Data
 
 ```julia
-using VpinEstimation, DataFrames, Dates
+using VPINEstimation, DataFrames, Dates
 
 # Create sample data
 n = 1000
@@ -79,8 +79,8 @@ The package includes comprehensive validation:
 
 ```julia
 # Validate your data before calculation
-VpinEstimation.validate_dataset(data)
-VpinEstimation.validate_parameters(60, 50, 10)
+VPINEstimation.validate_dataset(data)
+VPINEstimation.validate_parameters(60, 50, 10)
 ```
 
 ## Academic Reference
@@ -93,4 +93,4 @@ MIT License. See [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-Contributions welcome! Please see [GitHub Issues](https://github.com/jinyunfan/VpinEstimation.jl/issues) for bug reports and feature requests.
+Contributions welcome! Please see [GitHub Issues](https://github.com/jinyunfan/VPINEstimation.jl/issues) for bug reports and feature requests.

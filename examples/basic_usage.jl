@@ -1,6 +1,6 @@
-# Basic Usage Example for VpinEstimation.jl
+# Basic Usage Example for VPINEstimation.jl
 
-using VpinEstimation
+using VPINEstimation
 using CSV
 using DataFrames
 using Dates

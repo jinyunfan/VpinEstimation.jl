@@ -1,5 +1,5 @@
 """
-Input validation functions for VpinEstimation.jl
+Input validation functions for VPINEstimation.jl
 """
 
 using DataFrames

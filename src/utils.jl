@@ -1,5 +1,5 @@
 """
-Utility functions for VpinEstimation.jl
+Utility functions for VPINEstimation.jl
 
 This module contains helper functions extracted from the main VPIN calculation
 to improve code organization, performance, and maintainability.

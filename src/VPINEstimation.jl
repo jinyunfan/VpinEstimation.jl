@@ -1,5 +1,5 @@
 """
-VpinEstimation.jl
+VPINEstimation.jl
 
 A Julia package for calculating the Volume-synchronized Probability of Informed Trading (VPIN)
 in high-frequency trading environments. VPIN is a real-time measure of the probability of 
@@ -12,11 +12,11 @@ informed trading that can be used for risk management and market microstructure 
 Easley, D., López de Prado, M. M., & O'Hara, M. (2012). Flow toxicity and 
 liquidity in a high-frequency world. The Review of Financial Studies, 25(5), 1457-1493.
 """
-module VpinEstimation
+module VPINEstimation
 
 const VERSION = v"0.1.0"
-const PACKAGE_NAME = "VpinEstimation"
-const AUTHOR = "fanjinyun"
+const PACKAGE_NAME = "VPINEstimation"
+const AUTHOR = "Jinyun Fan"
 
 using DataFrames
 using CSV
@@ -33,7 +33,7 @@ include("calculate.jl")
 """
     package_version()
 
-Return the current version of VpinEstimation.jl package.
+Return the current version of VPINEstimation.jl package.
 """
 package_version() = VERSION
 

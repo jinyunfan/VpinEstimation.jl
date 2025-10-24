@@ -1,8 +1,8 @@
 """
-Test suite for VpinEstimation.jl - Functional and Unit Tests
+Test suite for VPINEstimation.jl - Functional and Unit Tests
 """
 
-using VpinEstimation
+using VPINEstimation
 using Test
 using CSV
 using DataFrames
@@ -12,31 +12,31 @@ using Statistics
 # Load test data
 testdata = CSV.read(joinpath(@__DIR__, "testdata.csv"), DataFrame)
 
-@testset "VpinEstimation.jl Tests" begin
+@testset "VPINEstimation.jl Tests" begin
     
     @testset "Package Info Tests" begin
-        @test VpinEstimation.package_version() == v"0.1.0"
-        info = VpinEstimation.package_info()
-        @test info["name"] == "VpinEstimation"
+        @test VPINEstimation.package_version() == v"0.1.0"
+        info = VPINEstimation.package_info()
+        @test info["name"] == "VPINEstimation"
     end
     
     @testset "Input Validation Tests" begin
         # Test valid dataset
-        @test VpinEstimation.validate_dataset(testdata) == true
+        @test VPINEstimation.validate_dataset(testdata) == true
         
         # Test invalid datasets
         empty_df = DataFrame()
-        @test_throws DomainError VpinEstimation.validate_dataset(empty_df)
+        @test_throws DomainError VPINEstimation.validate_dataset(empty_df)
         
         # Wrong number of columns (less than 3)
         wrong_cols = DataFrame(a=[1,2], b=[3,4])
-        @test_throws ArgumentError VpinEstimation.validate_dataset(wrong_cols)
+        @test_throws ArgumentError VPINEstimation.validate_dataset(wrong_cols)
         
         # Test parameter validation
-        @test VpinEstimation.validate_parameters(60, 50, 10) == true
-        @test_throws ArgumentError VpinEstimation.validate_parameters(-1, 50, 10)  # negative timebarsize
-        @test_throws ArgumentError VpinEstimation.validate_parameters(60, -1, 10)  # negative buckets
-        @test_throws DomainError VpinEstimation.validate_parameters(60, 10, 15)    # samplength >= buckets
+        @test VPINEstimation.validate_parameters(60, 50, 10) == true
+        @test_throws ArgumentError VPINEstimation.validate_parameters(-1, 50, 10)  # negative timebarsize
+        @test_throws ArgumentError VPINEstimation.validate_parameters(60, -1, 10)  # negative buckets
+        @test_throws DomainError VPINEstimation.validate_parameters(60, 10, 15)    # samplength >= buckets
     end
     
     @testset "Utility Functions Tests" begin
@@ -46,15 +46,15 @@ testdata = CSV.read(joinpath(@__DIR__, "testdata.csv"), DataFrame)
             price = [15.4, 15.5],
             volume = [100, 200]
         )
-        formatted_df = VpinEstimation.format_timestamps(test_df)
+        formatted_df = VPINEstimation.format_timestamps(test_df)
         @test eltype(formatted_df[!, 1]) == DateTime
         
         # Test validate_timestamp_format
         timestamps = [DateTime("2018-10-18T00:11:33"), DateTime("2018-10-18T00:13:10")]
-        @test VpinEstimation.validate_timestamp_format(timestamps) == true
+        @test VPINEstimation.validate_timestamp_format(timestamps) == true
         
         # Test calculate_daily_metrics
-        vbs = VpinEstimation.calculate_daily_metrics(100000.0, 5, 50)
+        vbs = VPINEstimation.calculate_daily_metrics(100000.0, 5, 50)
         @test vbs == 400.0  # (100000 / 5) / 50
     end
     
